@@ -585,58 +585,80 @@ session_start();
                                                     required>
                                                 <textarea name="description" placeholder="Description de l'avis"
                                                     class="input" required></textarea>
-                                                <select name="note_service" id="note" class="input" required>
+                                                    <?php
+                                                    print_r($categorie_offre);
+                                                        if ($categorie_offre == 'restauration') { ?>
+                                                            <div id="note_restauration">
+                                                            <select name="note_ambiance" id="note" class="input" required>
+    
+                                                                <option value="note_ambiance">Ambiance</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+    
+                                                            </select>
+    
+                                                            <select name="note_service" id="note" class="input" required>
+    
+                                                                <option value="note_service">Service</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+    
+    
+                                                            </select>
+    
+                                                            <select name="note_cuisine" id="note" class="input" required>
+    
+                                                                <option value="note_cuisine">Cuisine</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+    
+    
+                                                            </select>
+    
+                                                            <select name="note_rapport_qualite_prix" id="note" class="input" required>
+    
+                                                                <option value="note_rapport_qualite_prix">Qualité/prix</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+    
+    
+                                                            </select>
+    
+                                                            
+                                                        </div>
+                                                        <?php
+                                                        } else { ?>
+                                                            <select name="note_globale" id="note" class="input" required>
+    
+                                                                <option value="note_globale">note</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
 
-                                    <option value="note_service">Service</option>
-                                    <option value="note1">1</option>
-                                    <option value="note2">2</option>
-                                    <option value="note3">3</option>
-                                    <option value="note4">4</option>
-                                    <option value="note5">5</option>
 
-                                </select>
+                                                            </select>
+                                                        <?php
+                                                        }
+                                                        ?>
 
-                                <select name="note_qualite_prix" id="note" class="input" required>
+                                                    
 
-                                    <option value="note_qualite_prix">Qualité/Prix</option>
-                                    <option value="note1">1</option>
-                                    <option value="note2">2</option>
-                                    <option value="note3">3</option>
-                                    <option value="note4">4</option>
-                                    <option value="note5">5</option>
-
-                                    <p>/5</p>
-
-                                </select>
-
-                                <select name="note" id="note" class="input" required>
-
-                                    <option value="note1">1</option>
-                                    <option value="note2">2</option>
-                                    <option value="note3">3</option>
-                                    <option value="note4">4</option>
-                                    <option value="note5">5</option>
-
-                                    <p>/5</p>
-
-                                </select>
-
-                                <select name="note" id="note" class="input" required>
-
-                                                    <option value="note1">1</option>
-                                                    <option value="note2">2</option>
-                                                    <option value="note3">3</option>
-                                                    <option value="note4">4</option>
-                                                    <option value="note5">5</option>
-
-                                                    <p>/5</p>
-
-                                                </select>
-
-                                                <input type="date" name="date_experience" id="date_experience" class="input"
+                                                    <input type="date" name="date_experience" id="date_experience" class="input"
                                                     required>
-
-
 
                                                 <input type="submit" value="Envoyer"
                                                     class="bg-primary text-white rounded-lg p-2">
